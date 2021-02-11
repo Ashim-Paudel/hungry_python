@@ -1,4 +1,5 @@
-from turtle import Turtle, Screen
+"""keep track of current score and high score"""
+from turtle import Turtle
 
 
 class ScoreTracker(Turtle):
@@ -53,8 +54,6 @@ class HighScore(ScoreTracker):
             self.highscore = max([int(scores) for scores in highscore_file.readlines()])
             self.clear()
             self.print_high_score()
+            highscore_file.close()
         else:
-            pass
-
-
-
+            highscore_file.close()
