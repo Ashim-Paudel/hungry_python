@@ -1,5 +1,5 @@
+""""whole engine for snake"""
 from turtle import Turtle
-
 START_POSITION = [(0, 0), (-12, 0), (-24, 0)]
 
 
@@ -24,7 +24,6 @@ class Snake:
         snake.shapesize(stretch_wid=0.6, stretch_len=0.6)
         snake.goto(position)
         self.segments.append(snake)
-
 
     def extend_snake(self):
         self.add_segment(self.segments[-1].position())
