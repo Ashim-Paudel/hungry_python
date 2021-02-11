@@ -1,6 +1,6 @@
 """"To keep track of food objects displayed randomly in the screen"""
 
-from turtle import Turtle, Screen
+from turtle import Turtle
 import random
 
 bound_x = (-285, 279)
@@ -42,4 +42,3 @@ class BigFood(Turtle):
 
     def check_collision(self, snake_head):
         return self.distance(snake_head) < 10
-
