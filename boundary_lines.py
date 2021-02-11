@@ -1,3 +1,4 @@
+"""create boundary lines and check for collision also"""
 from turtle import Turtle
 bound_x = (-285, 279)
 bound_y = (-279, 256)
@@ -17,8 +18,7 @@ class BoundaryLines(Turtle):            # class to create boundary lines
         self.goto(289, 271)
         self.goto(-298, 271)
 
-    def is_collided(self, snake):            # defining collision with wall
+    @staticmethod
+    def is_collided(snake):            # defining collision with wall
         return (snake.head.xcor() < -294.5 or snake.head.xcor() > 280.5
                 or snake.head.ycor() < -280.5 or snake.head.ycor() > 267)
-
-
